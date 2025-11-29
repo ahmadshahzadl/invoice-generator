@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="40 32 176 192">
+  <defs>
+    <!-- subtle drop shadow for the invoice sheet -->
+    <filter id="sheetShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.22" />
+    </filter>
+
+    <!-- gradient for the top bar -->
+    <linearGradient id="bar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="50%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#22c55e" />
+    </linearGradient>
+  </defs>
+
+  <!-- invoice sheet icon (floating, transparent background) -->
+  <g filter="url(#sheetShadow)" transform="translate(48, 24)">
+    <!-- main sheet -->
+    <rect
+      x="24"
+      y="28"
+      width="112"
+      height="152"
+      rx="20"
+      fill="#f9fafb"
+      stroke="#e5e7eb"
+      stroke-width="2"
+    />
+
+    <!-- folded corner -->
+    <path
+      d="M120 28 L136 28 L136 44"
+      fill="#e5e7eb"
+      stroke="#e5e7eb"
+      stroke-linejoin="round"
+    />
+
+    <!-- top colored bar -->
+    <rect x="32" y="36" width="96" height="32" rx="16" fill="url(#bar)" />
+
+    <!-- checkmark circle (paid / done feeling) -->
+    <circle cx="132" cy="82" r="16" fill="#22c55e" />
+    <path
+      d="M125 82.5l5 5.5 9-11"
+      fill="none"
+      stroke="#f9fafb"
+      stroke-width="3"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+
+    <!-- lines representing invoice rows -->
+    <g stroke-linecap="round" stroke-width="3">
+      <line x1="40" y1="90" x2="116" y2="90" stroke="#cbd5f5" />
+      <line x1="40" y1="108" x2="116" y2="108" stroke="#e5e7eb" />
+      <line x1="40" y1="126" x2="116" y2="126" stroke="#e5e7eb" />
+      <line x1="40" y1="144" x2="116" y2="144" stroke="#e5e7eb" />
+    </g>
+
+    <!-- total section pill -->
+    <rect x="48" y="154" width="72" height="20" rx="10" fill="#e5e7eb" />
+
+    <!-- subtle currency / amount hint -->
+    <text
+      x="84"
+      y="168"
+      text-anchor="middle"
+      font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+      font-size="9"
+      fill="#374151"
+      font-weight="600"
+    >
+      EASY INV
+    </text>
+  </g>
+</svg>
