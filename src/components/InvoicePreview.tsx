@@ -9,7 +9,7 @@ export default function InvoicePreview({ data }: InvoicePreviewProps) {
   return (
     <div
       id="invoice-preview"
-      className="bg-white w-[794px] min-h-[1050px] mx-auto flex flex-col text-gray-900 p-8"
+      className="bg-white w-full max-w-[794px] min-h-[1050px] mx-auto flex flex-col text-gray-900 p-4 sm:p-6 md:p-8"
     >
       {/* Header: company (top-left) and invoice details (top-right) */}
       <div className="flex items-start justify-between mb-6 border-b pb-4" style={{ borderColor: '#e5e7eb' }}>

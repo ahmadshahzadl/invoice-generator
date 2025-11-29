@@ -48,7 +48,7 @@ export default function InvoiceForm({
 
   return (
     <div className="space-y-6">
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-5 sm:p-6">
         <h3 className="text-lg font-semibold text-gray-900 mb-4">Logo</h3>
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-4">
@@ -90,7 +90,7 @@ export default function InvoiceForm({
         </div>
       </div>
 
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-5 sm:p-6">
         <h3 className="text-lg font-semibold text-gray-900 mb-4">Company Details</h3>
         <div className="space-y-4">
           <div>
@@ -132,7 +132,7 @@ export default function InvoiceForm({
         </div>
       </div>
 
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-5 sm:p-6">
         <h3 className="text-lg font-semibold text-gray-900 mb-4">Customer Details</h3>
         <div className="space-y-4">
           <div>
@@ -162,9 +162,9 @@ export default function InvoiceForm({
         </div>
       </div>
 
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-5 sm:p-6">
         <h3 className="text-lg font-semibold text-gray-900 mb-4">Invoice Details</h3>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
               Invoice Number

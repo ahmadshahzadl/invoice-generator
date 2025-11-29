@@ -115,14 +115,14 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
-      <div className="max-w-7xl mx-auto px-4 py-8">
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">Invoice Generator</h1>
+      <div className="max-w-7xl mx-auto px-4 py-6 md:py-8">
+        <div className="text-center mb-6 md:mb-8">
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">Invoice Generator</h1>
           <p className="text-gray-600">Create professional invoices in minutes</p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="space-y-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+          <div className="space-y-5 md:space-y-6">
             <InvoiceForm
               logo={logo}
               onLogoUpload={handleLogoUpload}
@@ -151,7 +151,7 @@ function App() {
               onUpdateItem={handleUpdateItem}
             />
 
-            <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+            <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-5 sm:p-6">
               <div className="flex items-center justify-between">
                 <div>
                   <span className="text-2xl font-bold text-gray-900">Total:</span>
@@ -170,7 +170,7 @@ function App() {
             <button
               onClick={handleDownloadPDF}
               disabled={isGenerating}
-              className="w-full flex items-center justify-center gap-2 px-6 py-4 text-white rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed font-semibold text-lg shadow-lg hover:shadow-xl hover:opacity-90"
+              className="w-full flex items-center justify-center gap-2 px-5 py-3.5 sm:px-6 sm:py-4 text-white rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed font-semibold text-base sm:text-lg shadow-lg hover:shadow-xl hover:opacity-90"
               style={{ backgroundColor: primaryColor }}
             >
               <Download size={24} />
@@ -178,12 +178,14 @@ function App() {
             </button>
           </div>
 
-          <div className="lg:sticky lg:top-8 h-fit">
+          <div className="lg:sticky lg:top-8 h-fit mt-4 lg:mt-0">
             <div className="mb-4">
               <h2 className="text-xl font-semibold text-gray-900">Preview</h2>
               <p className="text-sm text-gray-600">Live preview of your invoice</p>
             </div>
-            <InvoicePreview data={invoiceData} />
+            <div className="overflow-x-auto">
+              <InvoicePreview data={invoiceData} />
+            </div>
           </div>
         </div>
       </div>
